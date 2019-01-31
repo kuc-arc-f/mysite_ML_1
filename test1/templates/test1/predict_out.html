@@ -1,0 +1,15 @@
+{% extends "test1/base.html" %}
+
+{% block title %}　price{% endblock title %}
+
+{% block content %}
+<h1>Predict Price:</h1> 
+<br />
+  <div>
+    <h3>price : {{price}} [JPY]</h3>
+
+  </div>
+  <hr />
+  <a href="{% url 'test1:predict_input' %}" class="btn btn-secondary btn-sm">戻る</a>
+  <br />
+{% endblock content %}

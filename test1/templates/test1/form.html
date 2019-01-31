@@ -1,0 +1,14 @@
+{% extends "test1/base.html" %}
+
+{% block title %}form_test{% endblock title %}
+
+{% block content %}
+<h1>Form_test </h1>
+<form action="{% url 'test1:form_test'  %}" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <br />
+  <input type="submit" value="POST" />
+</form>
+
+{% endblock content %}
